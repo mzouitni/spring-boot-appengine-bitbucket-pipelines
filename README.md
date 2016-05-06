@@ -5,6 +5,7 @@ Modified from : https://github.com/spring-guides/gs-spring-boot
 A very simple spring-boot on appengine project
 
 ## Getting Started
+- make sure you're using Java 8
 - install the Google Cloud SDK https://cloud.google.com/sdk/
 - install java appengine components
 ```
