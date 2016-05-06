@@ -39,14 +39,6 @@ dependencies {
     // end::tests[]
 }
 
-model {
-  gcpApp {
-    tools {
-      cloudSdkHome = "${project.cloudSdkHome}"
-    }
-  }
-}
-
 task wrapper(type: Wrapper) {
     gradleVersion = '2.12'
 }
