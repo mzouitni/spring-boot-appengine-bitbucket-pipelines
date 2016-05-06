@@ -26,3 +26,18 @@ git clone https://github.com/loosebazooka/simple-spring-boot-appengine-app
   - Stage : `./gradlew gcpAppStage`
   - Deploy : `./gradlew gcpAppDeploy`
   
+### Maven
+- If the plugin is unable to discover the location of the Cloud SDK automatically, specify it in the configuration:
+```
+<plugin>
+    <groupId>com.google.cloud.tools</groupId>
+    <artifactId>gcp-app-maven-plugin</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <configuration>
+        <cloudSdkPath>/path/to/cloud/sdk</cloudSdkPath>
+    </configuration>
+</plugin>
+```
+- You are now ready to run commands
+  - Stage : `mvn gcp-app:stage`
+  - Deploy : `mvn gcp-app:deploy`
