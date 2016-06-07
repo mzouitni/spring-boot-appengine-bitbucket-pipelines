@@ -1,3 +1,2 @@
 vm: true
 runtime: java
-service: springboot
