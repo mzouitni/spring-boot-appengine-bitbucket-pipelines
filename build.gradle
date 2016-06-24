@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.4.RELEASE")
-        classpath("com.google.cloud.tools:app-gradle-plugin:0.1.0-SNAPSHOT")
+        classpath("com.google.cloud.tools:appengine-gradle-plugin:0.1.0-SNAPSHOT")
     }
 }
 
@@ -15,7 +15,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
-apply plugin: 'com.google.cloud.tools.gcp-app'
+apply plugin: 'com.google.cloud.tools.appengine'
 
 jar {
     baseName = 'gs-spring-boot'
