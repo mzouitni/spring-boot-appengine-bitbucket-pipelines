@@ -21,7 +21,7 @@ git clone https://github.com/loosebazooka/simple-spring-boot-appengine-app
     
     ``` 
     model {
-      gcpApp {
+      appengine {
         tools {
           cloudSdkHome = "/path/to/cloud/sdk"
         }
@@ -29,21 +29,21 @@ git clone https://github.com/loosebazooka/simple-spring-boot-appengine-app
     }
     ```
 - You are now ready to run commands
-  - Stage : `./gradlew gcpAppStage`
-  - Deploy : `./gradlew gcpAppDeploy`
+  - Stage : `./gradlew appengineStage`
+  - Deploy : `./gradlew appengineDeploy`
   
 ### Maven
 - If the plugin is unable to discover the location of the Cloud SDK automatically, specify it in the configuration:
 ```
 <plugin>
     <groupId>com.google.cloud.tools</groupId>
-    <artifactId>gcp-app-maven-plugin</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <artifactId>appengine-maven-plugin</artifactId>
+    <version>0.1.0-beta</version>
     <configuration>
         <cloudSdkPath>/path/to/cloud/sdk</cloudSdkPath>
     </configuration>
 </plugin>
 ```
 - You are now ready to run commands
-  - Stage : `mvn gcp-app:stage`
-  - Deploy : `mvn gcp-app:deploy`
+  - Stage : `mvn appengine:stage`
+  - Deploy : `mvn appengine:deploy`
