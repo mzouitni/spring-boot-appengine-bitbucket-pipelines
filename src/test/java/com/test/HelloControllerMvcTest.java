@@ -16,20 +16,20 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HelloControllerTest {
+public class HelloControllerMvcTest {
 
 	private MockMvc mvc;
 
 	@Before
 	public void setUp() throws Exception {
-		UserService userService = new UserService();
+		HelloService userService = new HelloService();
 		mvc = MockMvcBuilders.standaloneSetup(new HelloController(userService)).build();
 	}
 
 	@Test
-	public void getHello() throws Exception {
+	public void helloWorldMvc() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("Helloooo!!!")));
+				.andExpect(content().string(equalTo("Hello World!")));
 	}
 }
