@@ -3,7 +3,7 @@ Modified from : https://github.com/loosebazooka/simple-spring-boot-appengine-app
 
 Used bitbucket steps/configuration from: https://github.com/GoogleCloudPlatform/continuous-deployment-bitbucket
 
-# Spring-boot Appengine flex app deployed via bitbucket-pipelines
+# Spring-boot app on appengine flex deployed via bitbucket-pipelines
 A hello world Spring-boot on appengine flex with bitbucket pipelines 
 
 ## Getting Started
