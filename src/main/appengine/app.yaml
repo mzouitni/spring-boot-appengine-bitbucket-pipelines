@@ -7,7 +7,7 @@ health_check:
 
 network:
   forwarded_ports:
-  - 8081
+  - 808
 
 #manual_scaling:
 #  instances: 1

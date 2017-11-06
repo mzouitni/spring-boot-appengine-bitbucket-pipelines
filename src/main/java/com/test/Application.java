@@ -1,8 +1,10 @@
-package hello;
+package com.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.LifecycleProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,10 +12,17 @@ import org.springframework.context.support.DefaultLifecycleProcessor;
 
 @SpringBootApplication
 @SpringBootConfiguration
-@ComponentScan(basePackages = {"hello"})
-public class Application {
+@ComponentScan(basePackages = {"com.test"})
+public class Application extends SpringBootServletInitializer {
+  private static final Class<Application> application = Application.class;
+
   public static void main(String[] args) {
-    SpringApplication.run(new SpringApplication(Application.class), args);
+    new SpringApplication(application).run(args);
+  }
+
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
+    return applicationBuilder.sources(application);
   }
 
   /**
