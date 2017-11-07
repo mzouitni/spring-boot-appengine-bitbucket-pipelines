@@ -1,4 +1,4 @@
-package com.test;
+package com.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -12,7 +12,7 @@ import org.springframework.context.support.DefaultLifecycleProcessor;
 
 @SpringBootApplication
 @SpringBootConfiguration
-@ComponentScan(basePackages = {"com.test"})
+@ComponentScan(basePackages = {"com.hello"})
 public class Application extends SpringBootServletInitializer {
   private static final Class<Application> application = Application.class;
 

@@ -5,9 +5,9 @@ service: springboot
 health_check:
   enable_health_check: False
 
-network:
-  forwarded_ports:
-  - 808
+# network:
+  #forwarded_ports:
+  #- 8080
 
 #manual_scaling:
 #  instances: 1

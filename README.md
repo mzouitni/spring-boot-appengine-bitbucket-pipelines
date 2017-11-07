@@ -38,8 +38,7 @@ git clone https://github.com/mzouitni/spring-boot-appengine-bitbucket-pipelines
 
 ## Prerequisites
 
-* You have a Bitbucket account.
-* You have assigned the following Roles to the Bitbucket account: "App Engine Deployer", "App Engine flexible environment Service Agent" and "Storage Admin". 
+* You have a Bitbucket account. 
 * You have a Google App Engine account and have created a project.
 
 ## Steps to deploy to your own App Engine project
@@ -48,6 +47,7 @@ The service account credential is always necessary,
 in order to authenticate the `gcloud` command line tool.
 
 * Enable your repo or fork of this repo for Bitbucket Pipelines.
+* You have assigned the following Roles to the Bitbucket account: "App Engine Deployer", "App Engine flexible environment Service Agent" and "Storage Admin".
 * Enable the App Engine Admin API.
 
 Configure the following environment variables for Bitbucket Pipelines:

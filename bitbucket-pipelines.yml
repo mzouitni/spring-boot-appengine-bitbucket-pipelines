@@ -18,4 +18,5 @@ pipelines:
           - export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
           - bash ./gradlew build
           - echo ${GOOGLE_CLIENT_SECRET} > client-secret.json
+          - gcloud auth activate-service-account --key-file client-secret.json
           - bash ./gradlew appengineDeploy
